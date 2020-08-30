@@ -1,4 +1,4 @@
-package com.demo.message;
+package com.demo.consumer;
 
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 import java.util.Date;
 
 @Component
-public  class  MessageReceiver  {
+public  class MessageConsumer {
 
     @RabbitListener(queues  =  "test_queue_1")
     public  void  receive(String  msg)  {
