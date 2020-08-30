@@ -14,14 +14,15 @@ public  class  RabbitmqApplicationTests  {
     @Autowired
     private RabbitTemplate rabbitTemplate;
 
+    //发送队列消息
     @Test
     public  void  sendQueue()  {
         rabbitTemplate.convertAndSend("queue_exchange","test_queue_1","这是一个队列消息");
     }
 
+    //发送主题消息
     @Test
     public  void  sendTopic()  {
-
-        rabbitTemplate.convertAndSend("topic_exchange", "test_topic_1", "这是一个主题消息");
+        rabbitTemplate.convertAndSend("topic_exchange", "test_topic", "这是一个主题消息");
     }
 }

@@ -12,18 +12,19 @@ public class QueueConfig{
 
     @Bean
     public Queue queue() {
-        Queue queue = new Queue("test_queue_1", true);
-        return queue;
+        return new Queue("test_queue_1");
     }
+
+    // 直连型交换机，根据交换机name和routingKey将消息投递给对应队列(test_queue_1)。
     @Bean
-    public DirectExchange delayExchange() {
+    public DirectExchange directExchange() {
 
         return new DirectExchange("queue_exchange",true,false);
     }
 
-
+    //将test_queue_1队列绑定到queue_exchange交换机
     @Bean
     public Binding binding(){
-        return BindingBuilder.bind(queue()).to(delayExchange()).with("test_queue_1");
+        return BindingBuilder.bind(queue()).to(directExchange()).with("test_queue_1");
     }
 }
