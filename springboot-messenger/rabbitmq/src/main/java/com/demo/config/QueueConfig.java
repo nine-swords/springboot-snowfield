@@ -1,11 +1,11 @@
 package com.demo.config;
 
-import org.springframework.amqp.core.*;
+import org.springframework.amqp.core.Binding;
+import org.springframework.amqp.core.BindingBuilder;
+import org.springframework.amqp.core.DirectExchange;
+import org.springframework.amqp.core.Queue;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import java.util.HashMap;
-import java.util.Map;
 
 @Configuration
 public class QueueConfig{
@@ -18,7 +18,7 @@ public class QueueConfig{
     @Bean
     public DirectExchange delayExchange() {
 
-        return new DirectExchange("test_exchange",true,false);
+        return new DirectExchange("queue_exchange",true,false);
     }
 
 
