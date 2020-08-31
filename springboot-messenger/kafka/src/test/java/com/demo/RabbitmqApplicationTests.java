@@ -8,9 +8,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.TimeoutException;
-
 @SpringBootTest
 @RunWith(SpringRunner.class)
 public  class RabbitmqApplicationTests {
@@ -21,8 +18,10 @@ public  class RabbitmqApplicationTests {
     private KafkaTemplate<String,Object> kafkaTemplate;
 
     @Test
-    public void tool() throws InterruptedException, ExecutionException, TimeoutException {
-//        kafkaUtil.createTopic("test");
+    public void tool() throws Exception {
+//        //创建主题
+//        kafkaConfig.createTopic("test");
+        //查询主题列表
         kafkaConfig.queryTopics();
     }
 

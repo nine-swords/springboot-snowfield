@@ -15,6 +15,9 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
+/*
+ * 通过java API 操作kafka中的topic
+ */
 @Configuration
 public class KafkaConfig {
 
