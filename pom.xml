@@ -18,7 +18,7 @@
         <module>springboot-security</module>
         <module>springboot-messenger</module>
         <module>springboot-security</module>
-        <module>springboot-datasource</module>
+        <module>springboot-orm</module>
         <module>springboot-network</module>
         <module>springboot-concurrent</module>
         <module>springboot-validator</module>
