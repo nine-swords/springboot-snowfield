@@ -30,6 +30,7 @@
         <module>springboot-monitor</module>
         <module>springboot-pay</module>
         <module>springboot-proxy</module>
+        <module>springboot-dubbo</module>
     </modules>
 
     <parent>
