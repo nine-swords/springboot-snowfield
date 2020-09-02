@@ -1,6 +1,6 @@
 package com.demo;
 
-import com.demo.config.KafkaConfig;
+import com.demo.config.KafkaUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,16 +13,16 @@ import org.springframework.test.context.junit4.SpringRunner;
 public  class RabbitmqApplicationTests {
 
     @Autowired
-    private KafkaConfig kafkaConfig;
+    private KafkaUtil kafkaUtil;
     @Autowired
     private KafkaTemplate<String,Object> kafkaTemplate;
 
     @Test
     public void tool() throws Exception {
 //        //创建主题
-//        kafkaConfig.createTopic("test");
+//        kafkaUtil.createTopic("test");
         //查询主题列表
-        kafkaConfig.queryTopics();
+        kafkaUtil.queryTopics();
     }
 
     @Test
