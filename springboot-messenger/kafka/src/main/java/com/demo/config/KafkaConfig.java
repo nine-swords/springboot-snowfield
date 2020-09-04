@@ -19,12 +19,9 @@ public class KafkaConfig {
     public AdminClient adminClient() {
 
         Properties properties = new Properties();
-        properties.put(CommonClientConfigs.BOOTSTRAP_SERVERS_CONFIG,
-                BOOTSTRAP_SERVERS);
-        AdminClient adminClient = AdminClient.create(properties);
+        // 唯一必须参数
+        properties.put(CommonClientConfigs.BOOTSTRAP_SERVERS_CONFIG, BOOTSTRAP_SERVERS);
 
-        return adminClient;
+        return AdminClient.create(properties);
     }
-
-
 }

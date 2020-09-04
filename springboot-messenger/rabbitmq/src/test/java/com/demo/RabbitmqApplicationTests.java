@@ -32,7 +32,7 @@ public  class  RabbitmqApplicationTests  {
         rabbitTemplate.convertAndSend("topic_exchange", "test_topic.abc", "这是另一个主题消息");
     }
 
-    //发送主题消息（该消息只会发送到topic_exchange交换机的topic2队列）
+    //发送主题消息（该消息会发送到fanout_exchange交换机的所有队列）
     @Test
     public  void  sendFanout()  {
         rabbitTemplate.convertAndSend("fanout_exchange", null, "这是一个扇形主题消息");

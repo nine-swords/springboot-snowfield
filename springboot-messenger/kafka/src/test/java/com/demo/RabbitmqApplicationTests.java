@@ -20,14 +20,14 @@ public  class RabbitmqApplicationTests {
     @Test
     public void tool() throws Exception {
 //        //创建主题
-//        kafkaUtil.createTopic("test");
+        kafkaUtil.createTopic("test");
         //查询主题列表
-        kafkaUtil.queryTopics();
+//        kafkaUtil.listTopics();
+//        kafkaUtil.describeTopic("test");
     }
 
     @Test
     public void send(){
         kafkaTemplate.send("test", "这是一条消息"); //使用kafka模板发送信息
     }
-
 }
